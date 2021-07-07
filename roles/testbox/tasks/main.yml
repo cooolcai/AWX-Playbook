@@ -1,0 +1,9 @@
+- name: echo
+  shell: "echo 'Currently user is logining server_name' >>/root/output41.log"
+- name: date-1
+  shell: "date >>/root/output41.log"
+
+- name: echo user server_name output
+  shell: "echo 'Currently {{ user }} is logining {{ server_name }}' >> {{ output }}"
+- name: date-2
+  shell: "date >> {{ output }}"

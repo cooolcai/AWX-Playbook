@@ -1,0 +1,7 @@
+- hosts: "10.20.3.38"
+  gather_facts: true
+  remote_user: root
+  roles:
+    - testbox
+#- name: Load Variables
+#  include_vars: vars.yml
