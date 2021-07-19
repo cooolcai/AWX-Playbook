@@ -1,0 +1,6 @@
+- name: 复制安装文件和脚本
+  copy: "remote_src=no src=/media/mysql-new/* dest=/media/ mode=0644 force=yes"
+
+- name: 运行安装脚本
+  shell: "python 10-mysql-new.py"
+
