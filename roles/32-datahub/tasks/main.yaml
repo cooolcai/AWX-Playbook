@@ -4,6 +4,8 @@
   shell: "date >> {{ rcp_output }}"
 - name: input space
   shell: "echo 'datahub command done' >> {{ rcp_output }}"  
+
+  
 - name: input space
   shell: "echo ' ' >> {{ rcp_output }}"  
 
