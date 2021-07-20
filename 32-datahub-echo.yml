@@ -3,3 +3,9 @@
   remote_user: root
   roles:
     - 32-datahub-echo
+
+- hosts: 
+  - 001
+  roles:
+  - prepare/base
+  - prepare/kernel
