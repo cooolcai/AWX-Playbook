@@ -1,0 +1,12 @@
+- name: 复制zbx-agt安装包
+  copy: "remote_src=no src=/media/zbx-agt/ dest=/media/zbx-agt mode=0644 force=yes"
+
+- name: 安装zbx-agt
+  shell: "rpm -ivh /media/zbx-agt/{{ zbx_agt_version }}"
+
+- name: 修改zbx-agt配置文件：指定zbx-server端
+  shell: "sed -i "s/Server=127.0.0.1/{{ zbx_server }}/g" /etc/zabbix/zabbix_agentd.conf && sed -i "s/ServerActive=127.0.0.1/{{ zbx_server_active }}/g" /etc/zabbix/zabbix_agentd.conf"
+
+- name: 启动zbx-agt
+  shell: "service zabbix-agent start && service zabbix-agent status && systemctl enable zabbix-agent.service"
+

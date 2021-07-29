@@ -1,0 +1,5 @@
+- hosts: "zbx-agt"
+  gather_facts: true
+  remote_user: root
+  roles:
+    - zbx-agt-install
