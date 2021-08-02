@@ -272,3 +272,4 @@ curl -ku admin:password -H "Content-Type: application/json" -X POST -d '{"name":
     curl -ku admin:password -H "Content-Type: application/json" -X GET http://10.20.3.44/api/v2/hosts/ | python3 -m json.tool
     curl -ku admin:password -H "Content-Type: application/json" -X POST -d '{"name": "10.20.3.37","inventory": "curl-ini","variables": "{\n\t\"server_name\": \"37-datahub\",\n\t\"user\": \"root\",\n\t\"password\": \"ilw@2020\",\n\t\"rcp_output\": \"/root/rcp.txt\",\n\t\"echo_output\": \"/root/echo.txt\"\n}",}' http://10.20.3.44/api/v2/hosts/22/ | python3 -m json.tool
     第三步启动对应的template
+czm
