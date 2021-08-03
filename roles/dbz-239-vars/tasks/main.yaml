@@ -1,7 +1,7 @@
 - uri:
-    url: "http://localhost:8083/connectors"
-    method: POST
-    body: " {{ var1 }} "
+    url: " {{ var_url }} "
+    method: " {{ var_method }} "
+    body: " {{ var_body }} "
     headers:  Content-Type=application/json
     status_code: 201
     return_content: yes
