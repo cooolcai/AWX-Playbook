@@ -1,6 +1,6 @@
 - uri:
     url: " {{ var_url }} "
-    method: " {{ var_method }} "
+    method: POST
     body: " {{ var_body }} "
     headers:  Content-Type=application/json
     status_code: 201
