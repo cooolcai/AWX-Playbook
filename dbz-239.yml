@@ -1,5 +1,5 @@
-- hosts: "32-datahub"
+- hosts: "dbz-239"
   gather_facts: true
   remote_user: root
   roles:
-    - 32-datahub-echo
+    - dbz-239
