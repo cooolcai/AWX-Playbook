@@ -1,6 +1,2 @@
-- name: 路径作为变量，执行脚本。
-  shell: "{{ var_hudi_script_dir }}/step1-a.sh"
-
-
-- name: 路径作为变量，脚本名也作为变量。
-  shell: " {{ var_hudi_script_dir }}{{ var_script_name }}"
+- name: 完整命令作为一个变量，包括路径和变量名称
+  shell: " {{ var_full_cmd }}"
