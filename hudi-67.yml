@@ -1,0 +1,5 @@
+- hosts: "hudi-67"
+  gather_facts: true
+  remote_user: root
+  roles:
+    - hudi-step-1
