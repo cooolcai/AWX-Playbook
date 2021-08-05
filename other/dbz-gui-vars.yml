@@ -1,0 +1,4 @@
+var_url: 'http://localhost:8083/connectors'
+var_method: POST
+var_body: >-
+  {"name":"czm-test-1","config":{"connector.class":"io.debezium.connector.mysql.MySqlConnector","tasks.max":"1","database.hostname":"10.20.3.54","database.port":"5575","database.user":"root","database.password":"I.lw@2020","database.server.id":"354","database.server.name":"db_clientauthority_test","database.history.kafka.bootstrap.servers":"10.20.3.239:9092","database.history.kafka.topic":"history.czm-test-1","database.whitelist":"db_clientauthority_test","include.schema.changes":"true","time.precision.mode":"connect","decimal.handling.mode":"string","bigint.unsigned.handling.mode":"long"}}
