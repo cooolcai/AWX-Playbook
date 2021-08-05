@@ -1,0 +1,5 @@
+[datax-67]
+10.20.3.67 ansible_connection=ssh ansible_user=root ansible_ssh_pass=ilw@2020
+
+[datax:vars]
+var_full_cmd='python /software/datax/bin/datax.py /software/datax/job/czm-82-to-53.json'
