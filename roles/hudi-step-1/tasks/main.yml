@@ -1,2 +1,2 @@
 - name: 完整命令作为一个变量，包括路径和变量名称
-  shell: " {{ var_full_cmd }}"
+  shell: " {{ var_file_path }}"

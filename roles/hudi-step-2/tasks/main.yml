@@ -1,5 +1,5 @@
 - name: 通过ssh本地提交spark job
   ansible.builtin.shell:
     chdir: /root/yl/app/db_clientauthority_test/tb_client_screen_files/
-    cmd: ssh root@10.20.3.67 "{{ var_full_cmd }}"
+    cmd: ssh root@10.20.3.67 "{{ var_file_path }}"
     executable: /bin/sh
