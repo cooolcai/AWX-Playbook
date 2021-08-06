@@ -1,0 +1,5 @@
+- name: 复制安脚本文件
+  copy: "remote_src=no src=/media/binlog-check/ dest=/media/ mode=0644 force=yes"
+
+- name: 运行检查check-binlog脚本
+  shell: "python /media/{{ binlog_script }}"

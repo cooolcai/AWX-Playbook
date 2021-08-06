@@ -1,0 +1,5 @@
+- hosts: "binlog-177"
+  gather_facts: true
+  remote_user: root
+  roles:
+    - binlog-177
