@@ -1,2 +1,7 @@
 - name: 完整命令作为一个变量，包括路径和变量名称
   shell: python \$\{DATAX_HOME\}/bin/datax.py "{{ var_file_path }}"
+
+- name: 返回信息
+  ansible.builtin.debug:
+    var: result
+    verbosity: 2
