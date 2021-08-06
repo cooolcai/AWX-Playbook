@@ -1,0 +1,2 @@
+- name: 执行datahub-rcp文件
+  shell: "cd /opt/datahub/docker/ingestion/ && datahub ingest -c recipe.yml"
