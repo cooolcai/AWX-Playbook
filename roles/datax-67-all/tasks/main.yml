@@ -1,0 +1,3 @@
+- name: 启动dataX,配置文件作为变量
+  shell: "source /etc/profile && {{ var_file_path }}"
+  #shell: "source /etc/profile && {{ var_full_cmd }}"
