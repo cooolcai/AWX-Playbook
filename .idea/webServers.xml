@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="98d802bd-040b-4eef-a999-877cecfaacf5" name="10.20.3.44-ansible">
+        <fileTransfer accessType="SFTP" host="10.20.3.44" port="22" sshConfigId="d0bc47ce-c8e8-4b97-ab34-c9881742ae80" sshConfig="root@10.20.3.44:22 password">
+          <advancedOptions>
+            <advancedOptions controlEncoding="UTF-8" dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="b1e390a9-5f93-4004-b59e-d3bf031adcaa" name="10.20.3.53-init">
+        <fileTransfer accessType="SFTP" host="10.20.3.53" port="22" sshConfigId="1189eddb-4399-4c45-b469-68906a02090f" sshConfig="root@10.20.3.53:22 password">
+          <advancedOptions>
+            <advancedOptions controlEncoding="UTF-8" dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="849f8df0-00e6-4c73-9c1c-68fe24513f8b" name="10.20.3.54-init">
+        <fileTransfer accessType="SFTP" host="10.20.3.54" port="22" sshConfigId="c9b7bc2b-30a2-4902-9a63-0a3acfebec89" sshConfig="root@10.20.3.54:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
