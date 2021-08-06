@@ -1,0 +1,5 @@
+- hosts: "datax-67"
+  gather_facts: true
+  remote_user: root
+  roles:
+    - datax-67-single
