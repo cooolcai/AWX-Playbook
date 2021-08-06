@@ -2,4 +2,4 @@
   copy: "remote_src=no src=/media/mysql-dump/ dest=/media/ mode=0644 force=yes"
 
 - name: 运行安装脚本
-  shell: "python /media/21-mysql-dump.py"
+  shell: "python /media/{{ dump_scripts }}"
