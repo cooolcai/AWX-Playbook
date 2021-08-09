@@ -1,0 +1,5 @@
+- name: 创建新的deploy和pod
+  ansible.builtin.shell:
+    chdir: /bigdata_shared_file/shared_config/test_hudi/192.168.101.189_k8s-master1/kubernetes/deploy
+    cmd: kubectl delete -f  "{{ var_file_path }}"
+    executable: /bin/sh

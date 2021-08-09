@@ -2,4 +2,4 @@
   gather_facts: true
   remote_user: root
   roles:
-    - k8s-189
+    - k8s-delete-189
