@@ -1,0 +1,4 @@
+- name: 复制安脚本文件
+  copy: "remote_src=no src=/media/apollo/ dest=/media/ mode=0755 force=yes"
+- name: 运行测试脚本
+  shell: "/media/1.sh"

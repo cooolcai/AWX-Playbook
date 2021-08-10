@@ -1,0 +1,5 @@
+- hosts: "apollo_1"
+  gather_facts: true
+  remote_user: root
+  roles:
+    - apollo_1

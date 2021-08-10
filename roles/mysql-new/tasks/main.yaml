@@ -1,6 +1,18 @@
 - name: 复制安装文件和脚本
   copy: "remote_src=no src=/media/mysql-new/ dest=/media/ mode=0644 force=yes"
 
+- name: 传递变量给脚本
+  shell: "sed -i \"0,/var_src_db_user = 'root'/s/var_src_db_user = 'root'/{{var_src_db_user}}/\" /media/{{ install_scripts }}"
+
+- name: 传递变量给脚本
+  shell: "sed -i \"0,/var_src_db_user = 'root'/s/var_src_db_user = 'root'/{{var_src_db_pwd}}/\" /media/{{ install_scripts }}"
+
+- name: 传递变量给脚本
+  shell: "sed -i \"0,/var_src_db_user = 'root'/s/var_src_db_user = 'root'/{{var_src_db_ip}}/\" /media/{{ install_scripts }}"
+
+- name: 传递变量给脚本
+  shell: "sed -i \"0,/var_src_db_user = 'root'/s/var_src_db_user = 'root'/{{var_src_db_port}}/\" /media/{{ install_scripts }}"
+
 - name: 运行安装脚本
   shell: "python /media/{{ install_scripts }}"
 
