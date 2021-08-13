@@ -1,0 +1,17 @@
+- name: 复制pmm-client安装包
+  copy: "remote_src=no src=/etc/ansible/example/pmm/file/ dest=/media/pmm-client mode=0644 force=yes"
+
+- name: 安装pmm-client客户端
+  shell: "rpm -ivh /media/pmm-client/{{ pmm_client_rpm }}"
+
+- name: 启动客户端，连接server端
+  shell: "pmm-admin config --server-insecure-tls --server-url=https://admin:{{ pmm_server_pwd }}@10.200.91.117"
+
+- name: 创建pmm数据库用户
+  shell: "mysql --connect-expired-password -uroot -p{{ mysql_pwd }} -e \"CREATE USER 'pmm'@'localhost' IDENTIFIED BY '{{ mysql_pwd }}' WITH MAX_USER_CONNECTIONS 10;\""
+
+- name: 给pmm赋予查询权限
+  shell: "mysql --connect-expired-password -uroot -p{{ mysql_pwd }} -e \"GRANT SELECT, PROCESS, SUPER, REPLICATION CLIENT, RELOAD ON *.* TO 'pmm'@'localhost';\""
+
+- name: 在pmm客户端配置中写入pmm数据库用户信息
+  shell: "mysql --connect-expired-password -uroot -p{{ mysql_pwd }} -e \"pmm-admin add mysql --username=pmm --password={{ mysql_pwd }} --query-source=perfschema\""
