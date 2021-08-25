@@ -5,7 +5,7 @@
   shell: "sed -i \"0,/var_src_db_user = 'root'/s/var_src_db_user = 'root'/{{var_src_db_user}}/\" /media/{{ install_scripts }}"
 
 - name: 传递变量给脚本
-  shell: "sed -i \"0,/var_src_db_user = 'root'/s/var_src_db_user = 'root'/{{var_src_db_pwd}}/\" /media/{{ install_scripts }}"
+  shell: "sed -i \"0,/mysql_new_pwd = \"I.lw@2020\"/s/mysql_new_pwd = \"{{var_src_db_pwd}}\"/\" /media/{{ install_scripts }}"
 
 - name: 传递变量给脚本
   shell: "sed -i \"0,/var_src_db_user = 'root'/s/var_src_db_user = 'root'/{{var_src_db_ip}}/\" /media/{{ install_scripts }}"
